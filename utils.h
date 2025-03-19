@@ -84,6 +84,7 @@ void overlay_clear(void);
 void overlay_cursor(int x, int y);
 int overlay_on(void);
 void overlay(int on);
+void overlay_message(char* msg, int center);
 
 // return true if core is ready. then core_id is set.
 // return false if timeout after 100ms
@@ -121,3 +122,5 @@ extern int16_t main_menu_config[];
 #define OPTION_OSD_KEY_SELECT_RIGHT 2
 
 #define OSD_KEY_CODE (option_osd_key == OPTION_OSD_KEY_SELECT_START ? 0xC : 0x84)
+
+#define BLOCK_SIZE (8*1024)
